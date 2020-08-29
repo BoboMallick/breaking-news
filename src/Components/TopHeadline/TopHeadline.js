@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import News from '../News/News';
 
 const TopHeadline = () => {
 
@@ -14,6 +15,10 @@ const TopHeadline = () => {
     return (
         <div>
             <h1>Top Headlines: {articles.length}</h1>
+
+            {
+                articles.map(article => <News article={article}></News>)
+            }
         </div>
     );
 };
